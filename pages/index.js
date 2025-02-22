@@ -1,7 +1,5 @@
-import React, { useState } from "react";
-import {FaBell, FaBrain, FaComments} from "react-icons/fa";
-import { useRouter } from "next/router";
-import LoadingSpinner from "@/components/LoadingSpinner";
+import { useState } from "react";
+import { FaBell, FaBrain, FaComments } from "react-icons/fa";
 
 const tools = [
   { value: "axe-core", label: "Axe-Core" },

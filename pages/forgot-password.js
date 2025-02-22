@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
+import { useState } from 'react';
 import { toast } from "react-toastify";
 
 const ForgotPassword = () => {
