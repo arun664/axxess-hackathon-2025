@@ -35,7 +35,7 @@ export const AuthProvider = ({ children }) => {
     localStorage.setItem("email", userData.email);
 
     if (!sessionStorage.getItem("results")) {
-      router.push("/");
+      router.push("/home");
     } else {
       router.push("/dashboard");
     }

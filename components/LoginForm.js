@@ -2,12 +2,12 @@ import React, { useState, useContext } from 'react';
 import { toast } from 'react-toastify';
 import { useRouter } from 'next/router';
 import 'react-toastify/dist/ReactToastify.css';
-import AuthContext from '@/context/AuthContext'; // Import AuthContext
+import AuthContext from '@/context/AuthContext';
 
 const LoginForm = ({ handleLoginSuccess }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const { login } = useContext(AuthContext); // Access login function from AuthContext
+  const { login } = useContext(AuthContext);
   const router = useRouter();
 
   // Email validation

@@ -37,38 +37,30 @@ const Header = () => {
         <nav className="flex items-center space-x-4">
           <ul className="flex space-x-4">
             <li>
-              <Link href="/" className="hover:underline">
-                Home
-              </Link>
-            </li>
-            <li>
               <Link href="/contact" className="hover:underline">
                 Contact
               </Link>
             </li>
-            {!loggedIn && (
-              <>
-                <li>
-                  <Link href="/register" className="hover:underline">
-                    Register
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/login" className="hover:underline">
-                    Login
-                  </Link>
-                </li>
-              </>
-            )}
+
             {loggedIn && (
               <>
                 <li>
+                  <Link href="/home" className="hover:underline">
+                    Home
+                  </Link>
+                </li>
+                <li>
                   <Link href="/history" className="hover:underline">
-                    History
+                    Patient Records
                   </Link>
                 </li>
                 <li className="relative">
-                  <button onClick={toggleDropdown} className="flex items-center" aria-label="Profile Button" title="Profile">
+                  <button
+                    onClick={toggleDropdown}
+                    className="flex items-center"
+                    aria-label="Profile Button"
+                    title="Profile"
+                  >
                     <img
                       src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png"
                       alt="Profile"
