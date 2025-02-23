@@ -556,7 +556,7 @@ const RegistrationForm = () => {
               disabled={!isFormValid}
               className={`bg-blue-600 text-white p-3 rounded w-full hover:bg-blue-700 transition duration-200 ${!isFormValid ? 'opacity-50 cursor-not-allowed' : ''}`}
             >
-              Update Profile
+              Register
             </button>
           </div>
         )}
