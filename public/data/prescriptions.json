@@ -1,0 +1,22 @@
+{
+  "currentPrescriptions": [
+    {
+      "name": "Prescription 1",
+      "date": "2025-02-22T14:30:00"
+    },
+    {
+      "name": "Prescription 2",
+      "date": "2025-02-23T09:00:00"
+    }
+  ],
+  "pastPrescriptions": [
+    {
+      "name": "Prescription 3",
+      "date": "2024-12-15T10:45:00"
+    },
+    {
+      "name": "Prescription 4",
+      "date": "2024-11-10T16:00:00"
+    }
+  ]
+}

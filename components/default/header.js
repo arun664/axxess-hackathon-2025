@@ -50,7 +50,7 @@ const Header = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/history" className="hover:underline">
+                  <Link href="/user/patient" className="hover:underline">
                     Patient Records
                   </Link>
                 </li>

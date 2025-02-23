@@ -1,0 +1,31 @@
+{
+    "upcomingAppointments": [
+      {
+        "id": 1,
+        "date": "2025-02-25",
+        "time": "10:00 AM",
+        "doctor": "Dr. Smith"
+      },
+      {
+        "id": 2,
+        "date": "2025-02-27",
+        "time": "02:30 PM",
+        "doctor": "Dr. Johnson"
+      }
+    ],
+    "scheduledAppointments": [
+      {
+        "id": 1,
+        "date": "2025-03-01",
+        "time": "11:00 AM",
+        "doctor": "Dr. Lee"
+      },
+      {
+        "id": 2,
+        "date": "2025-03-05",
+        "time": "01:00 PM",
+        "doctor": "Dr. Williams"
+      }
+    ]
+  }
+  

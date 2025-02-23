@@ -1,38 +1,31 @@
-import { useRouter } from 'next/router';
-import React, { useState } from 'react';
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css'; 
+import { useState } from 'react';
+import AppointmentTabs from './AppointmentTabs';
 
-export default async function handler(req, res) {
-    const handleAppointmentRegistration = async () => {
-      toast.dismiss(); // Dismiss any existing toasts
-      try {
-        const response = await fetch('/api/user/appointment-register', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            doctorID,
-            patientID,
-            appointmentStatus,
-          }),
-        });
-  
-        const result = await response.json();
-  
-        if (response.ok) {
-          toast.success(result.message);
-  
-          // Redirect to login page
-          router.push('/login');
-        } else {
-          toast.error(result.error); // Show error message
-        }
-      } catch (err) {
-        toast.error('There was an issue registering the user'); // Show general error
-      }
-        };
-    
-        handleRegister();
+const Appointments = () => {
+  const [activeTab, setActiveTab] = useState('Pending');
+
+  const renderContent = () => {
+    switch (activeTab) {
+      case 'Pending':
+        return <div>Your pending appointments will be displayed here.</div>;
+      case 'Upcoming':
+        return <div>Your upcoming appointments will be displayed here.</div>;
+      case 'Completed':
+        return <div>Your completed appointments will be displayed here.</div>;
+      default:
+        return null;
     }
+  };
+
+  return (
+    <div className = "flex-1 p-4">
+      <h1 className="text-2xl font-bold mb-4">Appointment Dashboard</h1>
+      <AppointmentTabs activeTab={activeTab} setActiveTab={setActiveTab} />
+      <div className="mt-4">
+        {renderContent()}
+      </div>
+    </div>
+  );
+};
+
+export default Appointments;

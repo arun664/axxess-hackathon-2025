@@ -120,24 +120,6 @@ export default function Home() {
           </ul>
         </div>
       )}
-
-      {/* GitHub Repository Link */}
-      <section className="mt-12">
-        <h3 className="text-2xl font-semibold text-gray-900 dark:text-gray-100">
-          GitHub Repository
-        </h3>
-        <p className="mt-4 text-lg leading-7 text-black dark:text-white">
-          Explore our code and contribute to the project on GitHub:{" "}
-          <a
-            href="https://github.com/arun664/axxess-hackathon-2025.git"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-pink-600 dark:text-pink-400 font-semibold"
-          >
-            AxxessHealth
-          </a>
-        </p>
-      </section>
     </div>
   );
 }
