@@ -43,7 +43,7 @@ const ForgotPassword = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-200 dark:bg-gray-900 p-4">
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 w-full max-w-md">
-        <h1 className="text-3xl font-bold text-center mb-6 text-blue-600 dark:text-blue-400">Reset Password</h1>
+        <h1 className="text-3xl font-bold text-center mb-6 text-pink-600 dark:text-pink-400">Reset Password</h1>
         <form onSubmit={handleResetRequest}>
           <div className="mb-4">
             <label htmlFor="email">Email</label>
@@ -60,14 +60,14 @@ const ForgotPassword = () => {
           {message && <p className="text-green-500 text-sm mt-2">{message}</p>}
           <button
             type="submit"
-            className="w-full py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-200 mt-4"
+            className="w-full py-3 bg-pink-600 text-white rounded-md hover:bg-pink-700 transition duration-200 mt-4"
           >
             Send Reset Link
           </button>
         </form>
         <p className="text-center text-gray-500 dark:text-gray-300 mt-4">
           Remembered your password?{' '}
-          <a href="/login" className="text-blue-800 font-bold dark:text-blue-400 hover:underline">
+          <a href="/login" className="text-blue-800 font-bold dark:text-pink-400 hover:underline">
             Login here
           </a>
         </p>

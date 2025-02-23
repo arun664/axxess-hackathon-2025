@@ -232,7 +232,7 @@ const Account = () => {
               className="border border-gray-300 p-3 rounded w-full focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 text-black dark:bg-gray-900 dark:text-white"
             />
             <div className="flex justify-end mt-4">
-              <button onClick={handlePasswordConfirm} className="bg-blue-600 text-white p-2 rounded mr-2 hover:bg-blue-700 transition duration-200">
+              <button onClick={handlePasswordConfirm} className="bg-pink-600 text-white p-2 rounded mr-2 hover:bg-pink-700 transition duration-200">
                 Confirm
               </button>
               <button onClick={closeModal} className="bg-gray-600 text-white p-2 rounded hover:bg-gray-700 transition duration-200">
@@ -276,7 +276,7 @@ const Account = () => {
               className="border border-gray-300 p-3 rounded w-full mt-2 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 text-black dark:bg-gray-900 dark:text-white"
             />
             <div className="flex justify-end mt-4">
-              <button onClick={handlePasswordUpdate} className="bg-blue-600 text-white p-2 rounded mr-2 hover:bg-blue-700 transition duration-200">
+              <button onClick={handlePasswordUpdate} className="bg-pink-600 text-white p-2 rounded mr-2 hover:bg-pink-700 transition duration-200">
                 Update
               </button>
               <button onClick={closePasswordModal} className="bg-gray-600 text-white p-2 rounded hover:bg-gray-700 transition duration-200">

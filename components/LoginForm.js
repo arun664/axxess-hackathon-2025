@@ -74,7 +74,7 @@ const LoginForm = ({ handleLoginSuccess }) => {
       />
       <button
         onClick={handleLogin}
-        className="bg-blue-600 text-white p-3 rounded w-full hover:bg-blue-700 transition duration-200"
+        className="bg-pink-600 text-white p-3 rounded w-full hover:bg-pink-700 transition duration-200"
       >
         Login
       </button>

@@ -29,7 +29,7 @@ const Header = () => {
   const toggleTheme = () => setIsDarkMode(!isDarkMode);
 
   return (
-    <header className="bg-blue-600 dark:bg-gray-800 text-white p-4">
+    <header className="bg-pink-600 dark:bg-gray-800 text-white p-4">
       <div className="container mx-auto flex justify-between items-center">
         <h1 className="text-2xl font-bold">
           <Link href="/">AxxessHealth</Link>
@@ -84,7 +84,7 @@ const Header = () => {
                         <li>
                           <Link
                             href="/user/account"
-                            className="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-blue-500 dark:hover:bg-blue-600 hover:text-white"
+                            className="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-blue-500 dark:hover:bg-pink-600 hover:text-white"
                             onClick={() => setDropdownOpen(false)} // Close dropdown on click
                           >
                             Profile
@@ -96,7 +96,7 @@ const Header = () => {
                               logout();
                               setDropdownOpen(false); // Close dropdown on logout
                             }}
-                            className="block w-full text-left px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-blue-500 dark:hover:bg-blue-600 hover:text-white"
+                            className="block w-full text-left px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-blue-500 dark:hover:bg-pink-600 hover:text-white"
                           >
                             Logout
                           </button>

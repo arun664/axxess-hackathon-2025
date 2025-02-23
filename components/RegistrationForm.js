@@ -266,7 +266,7 @@ const RegistrationForm = () => {
     <div className="min-h-screen flex items-center justify-center">
       <div className="w-full max-w-4xl bg-white p-8 rounded-lg shadow-lg">
         <div className="w-full bg-gray-200 rounded-full h-2.5 mb-4">
-          <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: `${(currentStep / 3) * 100}%` }}></div>
+          <div className="bg-pink-600 h-2.5 rounded-full" style={{ width: `${(currentStep / 3) * 100}%` }}></div>
         </div>
         {currentStep === 1 && (
       <div>
@@ -434,7 +434,7 @@ const RegistrationForm = () => {
 
             <button
               onClick={nextStep}
-              className={`bg-blue-600 text-white p-3 rounded w-full hover:bg-blue-700 transition duration-200 ${!isBasicInfoValid ? 'opacity-50 cursor-not-allowed' : ''}`}
+              className={`bg-pink-600 text-white p-3 rounded w-full hover:bg-pink-700 transition duration-200 ${!isBasicInfoValid ? 'opacity-50 cursor-not-allowed' : ''}`}
               disabled={!isBasicInfoValid}
             >
               Next
@@ -508,7 +508,7 @@ const RegistrationForm = () => {
             </button>
             <button
               onClick={nextStep}
-              className={`bg-blue-600 text-white p-3 rounded w-full hover:bg-blue-700 transition duration-200 ${!isInsuranceInfoValid ? 'opacity-50 cursor-not-allowed' : ''}`}
+              className={`bg-pink-600 text-white p-3 rounded w-full hover:bg-pink-700 transition duration-200 ${!isInsuranceInfoValid ? 'opacity-50 cursor-not-allowed' : ''}`}
               disabled={!isInsuranceInfoValid}
             >
               Next
@@ -554,7 +554,7 @@ const RegistrationForm = () => {
             <button
               onClick={handleRegister}
               disabled={!isFormValid}
-              className={`bg-blue-600 text-white p-3 rounded w-full hover:bg-blue-700 transition duration-200 ${!isFormValid ? 'opacity-50 cursor-not-allowed' : ''}`}
+              className={`bg-pink-600 text-white p-3 rounded w-full hover:bg-pink-700 transition duration-200 ${!isFormValid ? 'opacity-50 cursor-not-allowed' : ''}`}
             >
               Register
             </button>
