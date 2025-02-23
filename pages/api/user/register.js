@@ -2,7 +2,22 @@ import { db } from '@/config/firebaseConfig';
 import { doc, setDoc, collection, query, where, getDocs } from 'firebase/firestore/lite'; // Firestore functions
 
 export default async function handler(req, res) {
-  const { email, username, password } = req.body;
+  const { email, username, password,   firstName,
+    lastName,
+    dob,
+    gender,
+    phoneNumber,
+    address,
+    zipCode,
+    city,
+    state,
+    country,
+    insuranceProvider,
+    groupNumber,
+    insuranceId,
+    currentMedication,
+    allergies,
+    pastSurgeries, } = req.body;
 
   try {
     const usersRef = collection(db, 'users');
@@ -17,6 +32,22 @@ export default async function handler(req, res) {
       email,
       username,
       password, // Consider hashing this password for security
+      firstName,
+      lastName,
+      dob,
+      gender,
+      phoneNumber,
+      address,
+      zipCode,
+      city,
+      state,
+      country,
+      insuranceProvider,
+      groupNumber,
+      insuranceId,
+      currentMedication,
+      allergies,
+      pastSurgeries,
     });
 
     return res.status(200).json({ message: 'User registered successfully' });
