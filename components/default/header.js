@@ -36,12 +36,6 @@ const Header = () => {
         </h1>
         <nav className="flex items-center space-x-4">
           <ul className="flex space-x-4">
-            <li>
-              <Link href="/contact" className="hover:underline">
-                Contact
-              </Link>
-            </li>
-
             {loggedIn && (
               <>
                 <li>
@@ -99,6 +93,11 @@ const Header = () => {
                 </li>
               </>
             )}
+            <li>
+              <Link href="/contact" className="hover:underline">
+                Contact
+              </Link>
+            </li>
           </ul>
           {/* Dark Mode Toggle Icon */}
           <button
