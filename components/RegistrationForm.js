@@ -281,7 +281,7 @@ const RegistrationForm = () => {
           setUserName(e.target.value);
           validateUsername(e.target.value); // Real-time validation
         }}
-        className="border border-gray-300 p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 text-black dark:bg-gray-900 dark:text-white"
+        className="border border-gray-300 p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-pink-500 transition duration-200 text-black dark:bg-gray-900 dark:text-white"
       />
       {usernameError && <p className="text-red-500 text-sm mt-2">{usernameError}</p>}
       <label htmlFor="email">Email</label>
@@ -294,7 +294,7 @@ const RegistrationForm = () => {
           setEmail(e.target.value);
           validateEmail(e.target.value); // Real-time validation
         }}
-        className="border border-gray-300 p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 text-black dark:bg-gray-900 dark:text-white"
+        className="border border-gray-300 p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-pink-500 transition duration-200 text-black dark:bg-gray-900 dark:text-white"
       />
       {emailError && <p className="text-red-500 text-sm mt-2">{emailError}</p>}
 
@@ -308,7 +308,7 @@ const RegistrationForm = () => {
           setPassword(e.target.value);
           validatePassword(e.target.value); // Real-time validation
         }}
-        className="border border-gray-300 p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 text-black dark:bg-gray-900 dark:text-white"
+        className="border border-gray-300 p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-pink-500 transition duration-200 text-black dark:bg-gray-900 dark:text-white"
       />
       {passwordError && <p className="text-red-500 text-sm mt-2">{passwordError}</p>}
             <label htmlFor="firstName" className="text-black">First Name</label>
@@ -321,7 +321,7 @@ const RegistrationForm = () => {
                 setFirstName(e.target.value);
                 validateFirstName(e.target.value);
               }}
-              className="border border-gray-300 p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 bg-white text-black"
+              className="border border-gray-300 p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-pink-500 transition duration-200 bg-white text-black"
             />
             {firstNameError && <p className="text-red-500 text-sm mt-2">{firstNameError}</p>}
 
@@ -335,7 +335,7 @@ const RegistrationForm = () => {
                 setLastName(e.target.value);
                 validateLastName(e.target.value);
               }}
-              className="border border-gray-300 p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 bg-white text-black"
+              className="border border-gray-300 p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-pink-500 transition duration-200 bg-white text-black"
             />
             {lastNameError && <p className="text-red-500 text-sm mt-2">{lastNameError}</p>}
 
@@ -348,7 +348,7 @@ const RegistrationForm = () => {
                 setDob(e.target.value);
                 validateDob(e.target.value);
               }}
-              className="border border-gray-300 p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 bg-white text-black"
+              className="border border-gray-300 p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-pink-500 transition duration-200 bg-white text-black"
             />
             {dobError && <p className="text-red-500 text-sm mt-2">{dobError}</p>}
 
@@ -357,7 +357,7 @@ const RegistrationForm = () => {
               id="gender"
               value={gender}
               onChange={(e) => setGender(e.target.value)}
-              className="border border-gray-300 p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 bg-white text-black"
+              className="border border-gray-300 p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-pink-500 transition duration-200 bg-white text-black"
             >
               <option value="">Select Gender</option>
               <option value="male">Male</option>
@@ -374,7 +374,7 @@ const RegistrationForm = () => {
                 setPhoneNumber(e.target.value);
                 validatePhoneNumber(e.target.value);
               }}
-              className="border border-gray-300 p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 bg-white text-black"
+              className="border border-gray-300 p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-pink-500 transition duration-200 bg-white text-black"
             />
             {phoneNumberError && <p className="text-red-500 text-sm mt-2">{phoneNumberError}</p>}
 
@@ -385,7 +385,7 @@ const RegistrationForm = () => {
               id="address"
               value={address}
               onChange={(e) => setAddress(e.target.value)}
-              className="border border-gray-300 p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 bg-white text-black"
+              className="border border-gray-300 p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-pink-500 transition duration-200 bg-white text-black"
             />
 
             <label htmlFor="zipCode" className="text-black">Zip Code</label>
@@ -398,7 +398,7 @@ const RegistrationForm = () => {
                 setZipCode(e.target.value);
                 validateZipCode(e.target.value);
               }}
-              className="border border-gray-300 p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 bg-white text-black"
+              className="border border-gray-300 p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-pink-500 transition duration-200 bg-white text-black"
             />
             {zipCodeError && <p className="text-red-500 text-sm mt-2">{zipCodeError}</p>}
 
@@ -409,7 +409,7 @@ const RegistrationForm = () => {
               id="city"
               value={city}
               onChange={(e) => setCity(e.target.value)}
-              className="border border-gray-300 p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 bg-white text-black"
+              className="border border-gray-300 p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-pink-500 transition duration-200 bg-white text-black"
             />
 
             <label htmlFor="state" className="text-black">State</label>
@@ -419,7 +419,7 @@ const RegistrationForm = () => {
               id="state"
               value={state}
               onChange={(e) => setState(e.target.value)}
-              className="border border-gray-300 p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 bg-white text-black"
+              className="border border-gray-300 p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-pink-500 transition duration-200 bg-white text-black"
             />
 
             <label htmlFor="country" className="text-black">Country</label>
@@ -429,7 +429,7 @@ const RegistrationForm = () => {
               id="country"
               value={country}
               onChange={(e) => setCountry(e.target.value)}
-              className="border border-gray-300 p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 bg-white text-black"
+              className="border border-gray-300 p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-pink-500 transition duration-200 bg-white text-black"
             />
 
             <button
@@ -449,7 +449,7 @@ const RegistrationForm = () => {
               id="insuranceProvider"
               value={insuranceProvider}
               onChange={(e) => setInsuranceProvider(e.target.value)}
-              className="border border-gray-300 p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 bg-white text-black"
+              className="border border-gray-300 p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-pink-500 transition duration-200 bg-white text-black"
             >
               <option value="">Select Insurance Provider</option>
               <option value="provider1">Atena</option>
@@ -467,7 +467,7 @@ const RegistrationForm = () => {
                   setOtherInsuranceProvider(e.target.value);
                   validateInsuranceProvider(e.target.value);
                 }}
-                className="border border-gray-300 p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 bg-white text-black"
+                className="border border-gray-300 p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-pink-500 transition duration-200 bg-white text-black"
               />
             )}
             {insuranceProviderError && <p className="text-red-500 text-sm mt-2">{insuranceProviderError}</p>}
@@ -482,7 +482,7 @@ const RegistrationForm = () => {
                 setGroupNumber(e.target.value);
                 validateGroupNumber(e.target.value);
               }}
-              className="border border-gray-300 p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 bg-white text-black"
+              className="border border-gray-300 p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-pink-500 transition duration-200 bg-white text-black"
             />
             {groupNumberError && <p className="text-red-500 text-sm mt-2">{groupNumberError}</p>}
 
@@ -496,7 +496,7 @@ const RegistrationForm = () => {
                 setInsuranceId(e.target.value);
                 validateInsuranceId(e.target.value);
               }}
-              className="border border-gray-300 p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 bg-white text-black"
+              className="border border-gray-300 p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-pink-500 transition duration-200 bg-white text-black"
             />
             {insuranceIdError && <p className="text-red-500 text-sm mt-2">{insuranceIdError}</p>}
 
@@ -524,7 +524,7 @@ const RegistrationForm = () => {
               id="currentMedication"
               value={currentMedication}
               onChange={(e) => setCurrentMedication(e.target.value)}
-              className="border border-gray-300 p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 bg-white text-black"
+              className="border border-gray-300 p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-pink-500 transition duration-200 bg-white text-black"
             />
 
             <label htmlFor="allergies" className="text-black">Allergies</label>
@@ -533,7 +533,7 @@ const RegistrationForm = () => {
               id="allergies"
               value={allergies}
               onChange={(e) => setAllergies(e.target.value)}
-              className="border border-gray-300 p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 bg-white text-black"
+              className="border border-gray-300 p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-pink-500 transition duration-200 bg-white text-black"
             />
 
             <label htmlFor="pastSurgeries" className="text-black">Past Surgeries</label>
@@ -542,7 +542,7 @@ const RegistrationForm = () => {
               id="pastSurgeries"
               value={pastSurgeries}
               onChange={(e) => setPastSurgeries(e.target.value)}
-              className="border border-gray-300 p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 bg-white text-black"
+              className="border border-gray-300 p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-pink-500 transition duration-200 bg-white text-black"
             />
 
             <button

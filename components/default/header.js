@@ -84,7 +84,7 @@ const Header = () => {
                         <li>
                           <Link
                             href="/user/account"
-                            className="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-blue-500 dark:hover:bg-pink-600 hover:text-white"
+                            className="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-pink-500 dark:hover:bg-pink-600 hover:text-white"
                             onClick={() => setDropdownOpen(false)} // Close dropdown on click
                           >
                             Profile
@@ -96,7 +96,7 @@ const Header = () => {
                               logout();
                               setDropdownOpen(false); // Close dropdown on logout
                             }}
-                            className="block w-full text-left px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-blue-500 dark:hover:bg-pink-600 hover:text-white"
+                            className="block w-full text-left px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-pink-500 dark:hover:bg-pink-600 hover:text-white"
                           >
                             Logout
                           </button>

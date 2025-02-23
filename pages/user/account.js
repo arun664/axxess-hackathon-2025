@@ -160,7 +160,7 @@ const Account = () => {
           id="username"
           value={username}
           disabled
-          className="border border-gray-300 p-3 rounded w-full focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 text-black dark:bg-gray-900 dark:text-white"
+          className="border border-gray-300 p-3 rounded w-full focus:outline-none focus:ring-2 focus:ring-pink-500 transition duration-200 text-black dark:bg-gray-900 dark:text-white"
         />
       </div>
       <div className="mb-4">
@@ -170,12 +170,12 @@ const Account = () => {
           id="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="border border-gray-300 p-3 rounded w-full focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 text-black dark:bg-gray-900 dark:text-white"
+          className="border border-gray-300 p-3 rounded w-full focus:outline-none focus:ring-2 focus:ring-pink-500 transition duration-200 text-black dark:bg-gray-900 dark:text-white"
         />
       </div>
       <button
         onClick={openModal}
-        className="bg-blue-900 text-white p-3 rounded w-full hover:bg-blue-400 hover:text-black transition duration-200"
+        className="bg-pink-900 text-white p-3 rounded w-full hover:bg-pink-400 hover:text-black transition duration-200"
       >
         Save
       </button>
@@ -204,7 +204,7 @@ const Account = () => {
               id="currentPassword2"
               value={currentPassword}
               onChange={(e) => setCurrentPassword(e.target.value)}
-              className="border border-gray-300 p-3 rounded w-full focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 text-black dark:bg-gray-900 dark:text-white"
+              className="border border-gray-300 p-3 rounded w-full focus:outline-none focus:ring-2 focus:ring-pink-500 transition duration-200 text-black dark:bg-gray-900 dark:text-white"
             />
             <div className="flex justify-end mt-4">
               <button onClick={handleDeleteHistory} className="bg-red-600 text-white p-2 rounded mr-2 hover:bg-red-700 transition duration-200">
@@ -229,7 +229,7 @@ const Account = () => {
               id="currentPassword3"
               value={currentPassword}
               onChange={(e) => setCurrentPassword(e.target.value)}
-              className="border border-gray-300 p-3 rounded w-full focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 text-black dark:bg-gray-900 dark:text-white"
+              className="border border-gray-300 p-3 rounded w-full focus:outline-none focus:ring-2 focus:ring-pink-500 transition duration-200 text-black dark:bg-gray-900 dark:text-white"
             />
             <div className="flex justify-end mt-4">
               <button onClick={handlePasswordConfirm} className="bg-pink-600 text-white p-2 rounded mr-2 hover:bg-pink-700 transition duration-200">
@@ -255,7 +255,7 @@ const Account = () => {
               value={currentPassword}
               onChange={(e) => setCurrentPassword(e.target.value)}
               placeholder="Current Password"
-              className="border border-gray-300 p-3 rounded w-full focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 text-black dark:bg-gray-900 dark:text-white"
+              className="border border-gray-300 p-3 rounded w-full focus:outline-none focus:ring-2 focus:ring-pink-500 transition duration-200 text-black dark:bg-gray-900 dark:text-white"
             />
             <label htmlFor="newPassword">New Password</label>
             <input
@@ -264,7 +264,7 @@ const Account = () => {
               value={newPassword}
               onChange={(e) => setNewPassword(e.target.value)}
               placeholder="New Password"
-              className="border border-gray-300 p-3 rounded w-full mt-2 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 text-black dark:bg-gray-900 dark:text-white"
+              className="border border-gray-300 p-3 rounded w-full mt-2 focus:outline-none focus:ring-2 focus:ring-pink-500 transition duration-200 text-black dark:bg-gray-900 dark:text-white"
             />
             <label htmlFor="confirmNewPassword">Confirm New Password</label>
             <input
@@ -273,7 +273,7 @@ const Account = () => {
               value={confirmNewPassword}
               onChange={(e) => setConfirmNewPassword(e.target.value)}
               placeholder="Confirm New Password"
-              className="border border-gray-300 p-3 rounded w-full mt-2 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 text-black dark:bg-gray-900 dark:text-white"
+              className="border border-gray-300 p-3 rounded w-full mt-2 focus:outline-none focus:ring-2 focus:ring-pink-500 transition duration-200 text-black dark:bg-gray-900 dark:text-white"
             />
             <div className="flex justify-end mt-4">
               <button onClick={handlePasswordUpdate} className="bg-pink-600 text-white p-2 rounded mr-2 hover:bg-pink-700 transition duration-200">

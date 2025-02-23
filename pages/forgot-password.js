@@ -53,7 +53,7 @@ const ForgotPassword = () => {
               value={email}
               onChange={handleEmailChange}
               placeholder="Enter your email"
-              className="w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 dark:bg-gray-900 dark:text-white"
+              className="w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500 transition duration-200 dark:bg-gray-900 dark:text-white"
             />
           </div>
           {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
@@ -67,7 +67,7 @@ const ForgotPassword = () => {
         </form>
         <p className="text-center text-gray-500 dark:text-gray-300 mt-4">
           Remembered your password?{' '}
-          <a href="/login" className="text-blue-800 font-bold dark:text-pink-400 hover:underline">
+          <a href="/login" className="text-pink-800 font-bold dark:text-pink-400 hover:underline">
             Login here
           </a>
         </p>

@@ -26,13 +26,13 @@ export default function ScheduleZoomMeeting({ zoomUserId }) {
       <h1 className="text-2xl font-bold mb-4">Schedule Zoom Meeting</h1>
       <button
         onClick={handleScheduleMeeting}
-        className="bg-blue-500 text-white p-2 rounded mb-4"
+        className="bg-pink-500 text-white p-2 rounded mb-4"
       >
         Schedule Meeting
       </button>
       {meetingLink && (
         <div className="mb-4">
-          <a href={meetingLink} target="_blank" rel="noopener noreferrer" className="text-blue-500">
+          <a href={meetingLink} target="_blank" rel="noopener noreferrer" className="text-pink-500">
             Join Zoom Meeting
           </a>
         </div>

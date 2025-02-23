@@ -61,7 +61,7 @@ const LoginForm = ({ handleLoginSuccess }) => {
         id="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        className="border border-gray-300 p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 text-black dark:bg-gray-900 dark:text-white"
+        className="border border-gray-300 p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-pink-500 transition duration-200 text-black dark:bg-gray-900 dark:text-white"
       />
       <label htmlFor="password">Password</label>
       <input
@@ -70,7 +70,7 @@ const LoginForm = ({ handleLoginSuccess }) => {
         id="password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
-        className="border border-gray-300 p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 text-black dark:bg-gray-900 dark:text-white"
+        className="border border-gray-300 p-3 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-pink-500 transition duration-200 text-black dark:bg-gray-900 dark:text-white"
       />
       <button
         onClick={handleLogin}
