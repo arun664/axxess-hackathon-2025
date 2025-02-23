@@ -1,10 +1,7 @@
-import React, { useContext, useEffect, useState } from "react";
-import { useRouter } from "next/router";
-import AxeCoreResultTable from "@/components/AxeCoreResultTable";
-import Pa11yResultTable from "@/components/Pa11yResultTable";
 import AuthContext from "@/context/AuthContext";
+import { useRouter } from "next/router";
+import { useContext, useState } from "react";
 import { toast } from "react-toastify";
-import CustomMultiSelect from "@/components/CustomMultiSelect";
 
 const tools = [
   { value: "axe-core", label: "Axe-Core" },
