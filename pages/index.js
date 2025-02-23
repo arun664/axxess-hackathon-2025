@@ -1,21 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { PiFirstAidFill } from "react-icons/pi";
-/*
-const doctors = [
-  { name: "Dr. Ayesha Khan", specialty: "Cardiologist", location: "New York, NY", email: "ayesha.khan@example.com", experience: "15 years", patientsTreated: 5000, languages: ["English", "Spanish"]},
-  { name: "Dr. Omar Siddiqui", specialty: "Dermatologist", location: "Los Angeles, CA", email: "omar.siddiqui@example.com", experience: "10 years", patientsTreated: 3500 , languages: ["English", "French"]},
-  { name: "Dr. Fatima Rahman", specialty: "Pediatrician", location: "Chicago, IL", email: "fatima.rahman@example.com", experience: "8 years", patientsTreated: 2000 , languages: ["English"]},
-  { name: "Dr. Ahmed Patel", specialty: "Orthopedic Surgeon", location: "Houston, TX", email: "ahmed.patel@example.com", experience: "20 years", patientsTreated: 7000 , languages: ["English"]},
-  { name: "Dr. Sara Malik", specialty: "Neurologist", location: "San Francisco, CA", email: "sara.malik@example.com", experience: "12 years", patientsTreated: 4000 , languages: ["English"]},
-  { name: "Dr. Zain Ali", specialty: "General Practitioner", location: "Seattle, WA", email: "zain.ali@example.com", experience: "6 years", patientsTreated: 1500 , languages: ["English, Chinese"]},
-  { name: "Dr. Noor Hassan", specialty: "Endocrinologist", location: "Miami, FL", email: "noor.hassan@example.com", experience: "18 years", patientsTreated: 6000 , languages: ["English"]},
-  { name: "Dr. Bilal Khan", specialty: "Psychiatrist", location: "Boston, MA", email: "bilal.khan@example.com", experience: "9 years", patientsTreated: 2500 , languages: ["English"]},
-  { name: "Dr. Layla Saeed", specialty: "Rheumatologist", location: "Denver, CO", email: "layla.saeed@example.com", experience: "14 years", patientsTreated: 4500 , languages: ["English"]}
-];
-*/
+
 export default function Home() {
   // State to store doctors data
   const [doctors, setDoctors] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
   const [isEmergencyWindowOpen, setIsEmergencyWindowOpen] = useState(false);
 
   const fetchDoctors = async () => {
@@ -37,6 +26,13 @@ export default function Home() {
     fetchDoctors();
   }, []);
 
+  // Filtered doctors based on search query
+  const filteredDoctors = doctors.filter((doctor) =>
+    doctor.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    doctor.specialty.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    doctor.location.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   const toggleEmergencyWindow = () => {
     setIsEmergencyWindowOpen(!isEmergencyWindowOpen);
   };
@@ -44,44 +40,63 @@ export default function Home() {
   return (
     <div className="max-w-7xl w-full p-6 mx-auto">
       {/* Search Bar */}
-      <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.4/dist/flowbite.min.css" />
       <div className="max-w-2xl mx-auto">
-        <form className="flex items-center">
-          <label htmlFor="voice-search" className="sr-only">Search</label>
+        <form
+          onSubmit={(e) => e.preventDefault()} // Prevent page reload
+          className="flex items-center"
+        >
+          <label htmlFor="search" className="sr-only">Search</label>
           <div className="relative w-full">
             <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-              <svg className="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd"></path></svg>
+              <svg className="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd"></path>
+              </svg>
             </div>
-            <input type="text" id="voice-search" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search Doctors" required />
-            <button type="button" className="flex absolute inset-y-0 right-0 items-center pr-3">
-              <svg className="w-4 h-4 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clipRule="evenodd"></path></svg>
-            </button>
+            <input
+              type="text"
+              id="search"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5"
+              placeholder="Search Doctors"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)} // Update state
+              required
+            />
           </div>
-          <button type="submit" className="inline-flex items-center py-2.5 px-3 ml-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"><svg className="mr-2 -ml-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>Search</button>
+          <button
+            type="submit"
+            className="inline-flex items-center py-2.5 px-3 ml-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
+          >
+            <svg className="mr-2 -ml-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+            Search
+          </button>
         </form>
-
-        <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
       </div>
 
       {/* Search Results */}
       <div className="max-w-4xl mx-auto p-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {doctors.map((doctor, index) => (
-            <div key={index} className="p-4 rounded-2xl shadow-md border border-gray-200">
-              <h2 className="text-lg font-semibold">{doctor.name}</h2>
-              <p className="text-gray-600">{doctor.specialty}</p>
-              <p className="text-gray-500 text-sm">{doctor.location}</p>
-              <p className="text-gray-500 text-sm">🩺 Experience: {doctor.experience}</p>
-              <p className="text-gray-500 text-sm">👨‍⚕️ Patients Treated: {doctor.patientsTreated}</p>
-              <p className="text-gray-500 text-sm">🗣️ Languages Spoken: <br></br> &emsp; {doctor.languages ? doctor.languages.join(", ") : "N/A"}</p>
-              <div className="mt-4 flex gap-2 justify-center">
-                <button className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 flex-1 text-sm">General Consultation</button>
-                <button className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 flex-1 text-sm">
-                  Emergency Contact
-                </button>
+          {filteredDoctors.length > 0 ? (
+            filteredDoctors.map((doctor, index) => (
+              <div key={index} className="p-4 rounded-2xl shadow-md border border-gray-200">
+                <h2 className="text-lg font-semibold">{doctor.name}</h2>
+                <p className="text-gray-600">{doctor.specialty}</p>
+                <p className="text-gray-500 text-sm">{doctor.location}</p>
+                <p className="text-gray-500 text-sm">🩺 Experience: {doctor.experience}</p>
+                <p className="text-gray-500 text-sm">👨‍⚕️ Patients Treated: {doctor.patientsTreated}</p>
+                <p className="text-gray-500 text-sm">🗣️ Languages Spoken: {doctor.languages ? doctor.languages.join(", ") : "N/A"}</p>
+                <div className="mt-4 flex gap-2 justify-center">
+                  <button className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 flex-1 text-sm">General Consultation</button>
+                  <button className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 flex-1 text-sm">
+                    Emergency Contact
+                  </button>
+                </div>
               </div>
-            </div>
-          ))}
+            ))
+          ) : (
+            <p className="text-center text-gray-500">No doctors found.</p>
+          )}
         </div>
       </div>
 
