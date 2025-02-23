@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import LoginForm from '@/components/LoginForm';
+import DoctorLoginForm from '@/components/doctorLoginform';
 import AuthContext from '@/context/AuthContext';
 
 const Login = () => {
@@ -12,8 +12,8 @@ const Login = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-200 dark:bg-gray-900 p-4">
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 w-full max-w-md">
-        <h1 className="text-3xl font-bold text-center mb-6 text-pink-600 dark:text-pink-400">Login</h1>
-        <LoginForm handleLoginSuccess={handleLoginSuccess} />
+        <h1 className="text-3xl font-bold text-center mb-6 text-pink-600 dark:text-pink-400">DoctorLogin</h1>
+        <DoctorLoginForm handleLoginSuccess={handleLoginSuccess} />
         <p className="text-center text-gray-500 dark:text-gray-300 mt-4">
           Don't have an account ?{' '}
           <a href="/register" className="text-pink-800 font-bold dark:text-pink-400 hover:underline">
@@ -27,8 +27,8 @@ const Login = () => {
           </a>
         </p>
         <p className="text-center text-gray-500 dark:text-gray-300 mt-4">
-          Doctor ?{' '}
-          <a href="/logindoctors" className="text-pink-800 font-bold dark:text-pink-400 hover:underline">
+          Patient ?{' '}
+          <a href="/login" className="text-pink-800 font-bold dark:text-pink-400 hover:underline">
             Login here
           </a>
         </p>
